@@ -1,8 +1,10 @@
 import {Col, Row} from "react-bootstrap";
 //import products from "../../public/products.js";
 import Products from "../Components/Products.jsx";
-import {useEffect, useState} from "react";
+
 import {useGetProductsQuery} from "../Slices/ProductsapiSlice.js";
+import Loader from "../Components/Loader.jsx";
+import Message from "../Components/Message.jsx";
 //import axios from "axios";
 useGetProductsQuery
 export default function HomeScreen() {
@@ -15,9 +17,9 @@ export default function HomeScreen() {
 
     {isLoading?(
 
-        <h2>Loading...</h2>
+        <Loader/>
     ):isError?(
-        <div>{isError?.data.message||isError.error}</div>
+        <Message variant='danger'>{isError?.data.message||isError.error}</Message>
     ):(
         <>
             <h1>Latest Products</h1>
