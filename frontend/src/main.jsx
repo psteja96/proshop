@@ -9,6 +9,8 @@ import ProductScreen from "./Screens/ProductScreen.jsx";
 import {Provider} from "react-redux";
 import store from "./Store.js";
 import CartScreen from "./Screens/CartScreen.jsx";
+import {LoginScreen} from "./Screens/LoginScreen.jsx";
+import RegisterScreen from "./Screens/RegisterScreen.jsx";
 
 //import 'bootstrap/dist/css/bootstrap.min.css';
 const router = createBrowserRouter(
@@ -17,6 +19,8 @@ const router = createBrowserRouter(
             <Route index={true} path="/" element={<HomeScreen/>}></Route>
             <Route path="product/:id" element={<ProductScreen/>}></Route>
             <Route path="/cart" element={<CartScreen/>}></Route>
+            <Route path="/login" element={<LoginScreen/>}></Route>
+            <Route path="/register" element={<RegisterScreen/>}></Route>
         </Route>
     )
 )

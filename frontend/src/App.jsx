@@ -1,10 +1,10 @@
-import {useState} from 'react'
-
 
 import {Header} from "./Components/Header.jsx";
 import {Container} from "react-bootstrap";
 import {Footer} from "./Components/Footer.jsx";
 import {Outlet} from "react-router-dom";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
                 </Container>
             </main>
             <Footer/>
+            <ToastContainer/>
         </>
     )
 }
