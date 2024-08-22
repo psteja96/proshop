@@ -34,7 +34,7 @@ export default function CheckoutStepper({step1,step2,step3,step4}){
           <Nav.Item>
               {step4?(
                   <LinkContainer to='/placeholder'>
-                      <Nav.Link>Sign In</Nav.Link>
+                      <Nav.Link>Place Order</Nav.Link>
                   </LinkContainer>
               ):(
                   <Nav.Link disabled>Place Order</Nav.Link>

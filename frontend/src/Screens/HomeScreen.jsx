@@ -5,14 +5,16 @@ import Products from "../Components/Products.jsx";
 import {useGetProductsQuery} from "../Slices/ProductsapiSlice.js";
 import Loader from "../Components/Loader.jsx";
 import Message from "../Components/Message.jsx";
+import {useGetUsrQuery} from "../Slices/usersApiSlice.js";
 //import axios from "axios";
-useGetProductsQuery
+
 export default function HomeScreen() {
 
    // const [products,setProducts]=useState([]);
 
     const {data:products, isLoading, isError}=useGetProductsQuery();
-
+    const {data:usrData}=useGetUsrQuery();
+  console.log(usrData);
     return <>
 
     {isLoading?(
