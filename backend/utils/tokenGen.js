@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 const generateToken=(res,userId)=>{
     const token=jwt.sign({userId},process.env.JWT_SECRET,{
-        expiresIn:'1D'
+        expiresIn:'11D'
     });
 
     //SEt JWT as HTTP ONLY Key
@@ -16,3 +16,4 @@ const generateToken=(res,userId)=>{
 }
 
 export default generateToken;
+
