@@ -8,7 +8,7 @@ export const usersApiSlice=apiSlice.injectEndpoints({
             query:(data) =>({
                 url:`${USERS_API}/auth`,
                 method:'POST',
-                body:data
+                body:data,
             }),
 
         }),
@@ -17,6 +17,14 @@ export const usersApiSlice=apiSlice.injectEndpoints({
                 url:`${USERS_API}`,
                 method:'POST',
                 body:data
+            }),
+
+        }),
+        getUsr:builder.query({
+            query:() =>({
+                url:`${USERS_API}/profile`,
+                method:'GET',
+
             }),
 
         }),
@@ -32,4 +40,4 @@ export const usersApiSlice=apiSlice.injectEndpoints({
     })
 })
 
-export const {useLoginMutation,useLogoutMutation,useRegisterMutation}=usersApiSlice;
+export const {useLoginMutation,useLogoutMutation,useRegisterMutation,useGetUsrQuery}=usersApiSlice;

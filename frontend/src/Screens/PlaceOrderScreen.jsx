@@ -34,10 +34,10 @@ export default function PlaceOrderScreen(){
                shippingPrice:cart.shippingPrice,
                taxPrice:cart.taxPrice,
                totalPrice:cart.totalPrice,
-           });
-     //  console.log(res);
-         // navigate(`/order/${res._id}`);
-           //dispatch(clearCartItems());
+           }).unwrap();
+      console.log(res);
+         navigate(`/order/${res._id}`);
+           dispatch(clearCartItems());
        }catch (e) {
            toast.error(e);
        }
